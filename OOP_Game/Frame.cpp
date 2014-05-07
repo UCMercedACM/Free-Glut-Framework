@@ -6,7 +6,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "glut_window.h"
+#include "Frame.h"
 
 
 //===== static members =====

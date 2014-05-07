@@ -3,7 +3,7 @@
 #ifndef APP_WINDOW_H
 #define APP_WINDOW_H
 
-# include "glut_window.h"
+# include "Frame.h"
 
 // The functionality of your application should be implemented inside AppWindow
 class AppWindow : public GlutWindow

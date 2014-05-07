@@ -1,6 +1,6 @@
 
 # include <iostream>
-# include "app_window.h"
+# include "BaseFrame.h"
 
 AppWindow::AppWindow ( const char* label, int x, int y, int w, int h )
           :GlutWindow ( label, x, y, w, h )

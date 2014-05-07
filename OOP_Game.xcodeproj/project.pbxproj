@@ -10,9 +10,9 @@
 		690016DC191AD5E3009FCEE7 /* OOP_Game.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 690016DB191AD5E3009FCEE7 /* OOP_Game.1 */; };
 		69BB8591191AE14C0050EFF2 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BB8590191AE14C0050EFF2 /* GLUT.framework */; };
 		69BB8593191AE15E0050EFF2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BB8592191AE15E0050EFF2 /* OpenGL.framework */; };
-		69BB8599191AE4990050EFF2 /* app_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB8594191AE4990050EFF2 /* app_main.cpp */; };
-		69BB859A191AE4990050EFF2 /* app_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB8595191AE4990050EFF2 /* app_window.cpp */; };
-		69BB859B191AE4990050EFF2 /* glut_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB8597191AE4990050EFF2 /* glut_window.cpp */; };
+		69BB8599191AE4990050EFF2 /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB8594191AE4990050EFF2 /* Engine.cpp */; };
+		69BB859A191AE4990050EFF2 /* BaseFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB8595191AE4990050EFF2 /* BaseFrame.cpp */; };
+		69BB859B191AE4990050EFF2 /* Frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB8597191AE4990050EFF2 /* Frame.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,11 +33,11 @@
 		690016DB191AD5E3009FCEE7 /* OOP_Game.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = OOP_Game.1; sourceTree = "<group>"; };
 		69BB8590191AE14C0050EFF2 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		69BB8592191AE15E0050EFF2 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		69BB8594191AE4990050EFF2 /* app_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = app_main.cpp; sourceTree = "<group>"; };
-		69BB8595191AE4990050EFF2 /* app_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = app_window.cpp; sourceTree = "<group>"; };
-		69BB8596191AE4990050EFF2 /* app_window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = app_window.h; sourceTree = "<group>"; };
-		69BB8597191AE4990050EFF2 /* glut_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glut_window.cpp; sourceTree = "<group>"; };
-		69BB8598191AE4990050EFF2 /* glut_window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glut_window.h; sourceTree = "<group>"; };
+		69BB8594191AE4990050EFF2 /* Engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Engine.cpp; sourceTree = "<group>"; };
+		69BB8595191AE4990050EFF2 /* BaseFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseFrame.cpp; sourceTree = "<group>"; };
+		69BB8596191AE4990050EFF2 /* BaseFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseFrame.h; sourceTree = "<group>"; };
+		69BB8597191AE4990050EFF2 /* Frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Frame.cpp; sourceTree = "<group>"; };
+		69BB8598191AE4990050EFF2 /* Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Frame.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,11 +74,11 @@
 		690016D8191AD5E3009FCEE7 /* OOP_Game */ = {
 			isa = PBXGroup;
 			children = (
-				69BB8594191AE4990050EFF2 /* app_main.cpp */,
-				69BB8595191AE4990050EFF2 /* app_window.cpp */,
-				69BB8596191AE4990050EFF2 /* app_window.h */,
-				69BB8597191AE4990050EFF2 /* glut_window.cpp */,
-				69BB8598191AE4990050EFF2 /* glut_window.h */,
+				69BB8594191AE4990050EFF2 /* Engine.cpp */,
+				69BB8595191AE4990050EFF2 /* BaseFrame.cpp */,
+				69BB8596191AE4990050EFF2 /* BaseFrame.h */,
+				69BB8597191AE4990050EFF2 /* Frame.cpp */,
+				69BB8598191AE4990050EFF2 /* Frame.h */,
 				690016DB191AD5E3009FCEE7 /* OOP_Game.1 */,
 			);
 			path = OOP_Game;
@@ -135,9 +135,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69BB8599191AE4990050EFF2 /* app_main.cpp in Sources */,
-				69BB859A191AE4990050EFF2 /* app_window.cpp in Sources */,
-				69BB859B191AE4990050EFF2 /* glut_window.cpp in Sources */,
+				69BB8599191AE4990050EFF2 /* Engine.cpp in Sources */,
+				69BB859A191AE4990050EFF2 /* BaseFrame.cpp in Sources */,
+				69BB859B191AE4990050EFF2 /* Frame.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
