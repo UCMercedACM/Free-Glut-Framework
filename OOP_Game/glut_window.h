@@ -11,9 +11,11 @@
 // In Windows we include our own included freeglut header file, but
 // in Linux, the header file should be installed in the system.
 #if defined WIN32
-#include <freeglut.h>
+#include <freeglut/freeglut.h>
 #elif defined __APPLE__
-#include <freeglut.h>
+#include <GLUT/glut.h>
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
 #else
 #include <GL/freeglut.h>
 #endif
