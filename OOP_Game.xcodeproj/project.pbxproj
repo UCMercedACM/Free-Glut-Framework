@@ -25,6 +25,7 @@
 		69BB85CA191B37DA0050EFF2 /* Missile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85C8191B37DA0050EFF2 /* Missile.cpp */; };
 		69BB85CD191B37E60050EFF2 /* Bomb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85CB191B37E60050EFF2 /* Bomb.cpp */; };
 		69BB85D0191B37FC0050EFF2 /* Explosion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85CE191B37FC0050EFF2 /* Explosion.cpp */; };
+		69BB85D3191B3FBF0050EFF2 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85D1191B3FBF0050EFF2 /* Grid.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +76,8 @@
 		69BB85CC191B37E60050EFF2 /* Bomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bomb.h; sourceTree = "<group>"; };
 		69BB85CE191B37FC0050EFF2 /* Explosion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Explosion.cpp; sourceTree = "<group>"; };
 		69BB85CF191B37FC0050EFF2 /* Explosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Explosion.h; sourceTree = "<group>"; };
+		69BB85D1191B3FBF0050EFF2 /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
+		69BB85D2191B3FBF0050EFF2 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +201,8 @@
 				69BB85CC191B37E60050EFF2 /* Bomb.h */,
 				69BB85CE191B37FC0050EFF2 /* Explosion.cpp */,
 				69BB85CF191B37FC0050EFF2 /* Explosion.h */,
+				69BB85D1191B3FBF0050EFF2 /* Grid.cpp */,
+				69BB85D2191B3FBF0050EFF2 /* Grid.h */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				69BB85C3191B374A0050EFF2 /* City.cpp in Sources */,
 				69BB859A191AE4990050EFF2 /* Game.cpp in Sources */,
 				69BB859F191AF2380050EFF2 /* Controller.cpp in Sources */,
+				69BB85D3191B3FBF0050EFF2 /* Grid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

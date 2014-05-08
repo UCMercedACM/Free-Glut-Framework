@@ -12,3 +12,8 @@ Player::Player() : Actor(0,0,1,100) {
     
     
 }
+
+void Player::draw() {
+    
+    
+}

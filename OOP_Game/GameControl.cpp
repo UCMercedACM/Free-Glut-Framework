@@ -7,12 +7,23 @@
 //
 
 #include "GameControl.h"
+#include "Engine.h"
+
+//Object Types
+#include "Player.h"
+#include "Grid.h"
 
 GameControl::GameControl() {
-    
-    //Create The Player
-    Player * player = new Player;
-    
-    Actors.push_back(player);
-    
+
+}
+
+void GameControl::Register(Actor* newActor) {
+    Actors.push_back(newActor);
+}
+
+void GameControl::UnRegister(Actor* newActor) {
+    for(int i = 0; i < Actors.size(); i++) {
+        if(Actors[i]->uid == newActor->uid)
+            Actors.erase(Actors.begin()+i);
+    }
 }

@@ -24,11 +24,11 @@
 
 
 //GAME OPTIONS
-#define WINDOW_START_X 300
-#define WINDOW_START_Y 300
+#define WINDOW_START_X 0
+#define WINDOW_START_Y 0
 #define WINDOW_WIDTH   1024
 #define WINDOW_HEIGHT  800
 #define GAME_TITLE     "THE BEST GAME EVER"
-
+#define SIZE .5
 
 #endif

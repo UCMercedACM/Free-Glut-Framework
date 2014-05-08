@@ -16,7 +16,6 @@
 // The functionality of your application should be implemented inside AppWindow
 class Game : public Engine{
     
-private :
     enum MenuEv { evOption0, evOption1 };
     float _markx, _marky;
     int _w, _h;
@@ -26,9 +25,8 @@ private :
     
 public :
     Game();
-    void windowToScene ( float& x, float &y );
     
-
+    void windowToScene ( float& x, float &y );
  };
 
 #endif // APP_WINDOW_H

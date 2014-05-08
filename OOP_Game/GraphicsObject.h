@@ -22,9 +22,9 @@ private:
     GraphicsObject(){};
     
 public:
-    GraphicsObject(int x, int y, int scale);
+    unsigned int uid;
+    GraphicsObject(int x, int y, float scale);
     virtual void draw() = 0;
-    
 };
 
 #endif /* defined(__OOP_Game__GraphicsObject__) */

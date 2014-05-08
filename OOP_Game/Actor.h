@@ -13,14 +13,12 @@
 #include "GraphicsCore.h"
 #include "stdafx.h"
 
-class Actor : GraphicsObject {
+class Actor : public GraphicsObject {
 private:
     int health;
     Actor() : GraphicsObject(0,0,0){};
 public:
-    Actor(float x, float y, int scale, int health);
-    virtual void death();
-    virtual void shoot();
+    Actor(float x, float y, float scale, int health);
     virtual void draw() = 0;
 };
 #endif /* defined(__OOP_Game__Actor__) */

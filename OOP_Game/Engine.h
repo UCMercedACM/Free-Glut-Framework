@@ -29,9 +29,11 @@ public:
     virtual void draw() = 0;
     virtual void resize( int w, int h ) {}
     virtual void update() {}
+    void Register(GraphicsObject *Object);
+    void UnRegister(GraphicsObject *Object);
     
     void redraw() { glutPostRedisplay(); }
-    
+    unsigned int ObjectUID;
     // Note that glutMainLoop never returns so your program is entirely event-driven
     void run () { glutMainLoop (); }
     

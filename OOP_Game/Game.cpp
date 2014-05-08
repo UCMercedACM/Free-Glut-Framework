@@ -8,10 +8,10 @@
 
 # include <iostream>
 # include "Game.h"
-
+# include "Grid.h"
 
 Game::Game() {
-    theGame->run();
+ 
 }
 
 // mouse events are in window coordinates, but your scene is in [0,1]x[0,1],
@@ -35,5 +35,6 @@ void Game::draw ()
 }
 
 void Game::update() {
-    
 }
+
+

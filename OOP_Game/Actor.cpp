@@ -8,7 +8,7 @@
 
 #include "Actor.h"
 
-Actor::Actor(float x, float y, int scale, int health)
+Actor::Actor(float x, float y, float scale, int health)
 : GraphicsObject(x,y,scale) {
     this->health = health;
 }

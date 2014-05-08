@@ -22,12 +22,14 @@ Engine::Engine() {
     
     // Set up GLUT callback for drawing the scene:
     ::glutDisplayFunc (glutDisplayCB);
+    
+    ObjectUID = 0;
 }
 
 void Engine::glutIdleCB ()
 {
     theGame->update();
-    
+    theGame->draw();
 }
 
 void Engine::glutReshapeCB ( int w, int h )
@@ -38,4 +40,23 @@ void Engine::glutReshapeCB ( int w, int h )
 void Engine::glutDisplayCB ()
 {
     theGame->draw();
+}
+
+void Engine::Register(GraphicsObject *Object){
+    Actor * ActorToRegister = dynamic_cast<Actor*>(Object);
+    Object->uid = ObjectUID;
+    
+    if(ActorToRegister)
+        logic.Register(ActorToRegister);
+    
+    renderer.Register(Object);
+}
+
+void Engine::UnRegister(GraphicsObject *Object){
+    Actor * ActorToRegister = dynamic_cast<Actor*>(Object);
+    
+    if(ActorToRegister)
+        logic.UnRegister(ActorToRegister);
+    
+    renderer.UnRegister(Object);
 }

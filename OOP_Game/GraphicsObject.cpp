@@ -7,14 +7,16 @@
 //
 
 #include "GraphicsObject.h"
+#include "Engine.h"
 
 //Object Types
 void RenderGrid();
 void RenderShip();
 void RenderCity();
 
-GraphicsObject::GraphicsObject(int x, int y, int scale) {
+GraphicsObject::GraphicsObject(int x, int y, float scale) {
     this->x = x;
     this->y = y;
     this->scale = scale;
+    theGame->renderer.Register(this);
 }

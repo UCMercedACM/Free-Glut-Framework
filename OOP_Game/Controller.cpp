@@ -7,7 +7,7 @@
 //
 #include "Engine.h"
 #include "Controller.h"
-
+#include "Grid.h"
 Controller::Controller() {
     // Set up GLUT callback functions to receive events:
     ::glutKeyboardFunc ( glutKeyboardCB );
@@ -29,6 +29,8 @@ void Controller::glutKeyboardCB ( unsigned char key, int x, int y )
     CurEvent.my = y;
     Singleton->handle ( CurEvent );
     */
+    //Create The World
+    cout << key;
 }
 
 void Controller::glutSpecialCB ( int key, int x, int y )
@@ -51,6 +53,7 @@ void Controller::glutMouseCB ( int b, int s, int x, int y )
     CurEvent.my = y;
     Singleton->handle ( CurEvent );
     */
+    cout << "test";
 }
 
 void Controller::glutMotionCB ( int x, int y )
@@ -63,6 +66,7 @@ void Controller::glutMotionCB ( int x, int y )
     CurEvent.my = y;
     Singleton->handle ( CurEvent );
     */
+    cout << "test";
 }
 
 void Controller::glutMenuCB ( int m )

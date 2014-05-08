@@ -17,8 +17,10 @@ class Graphics {
     
 public:
     Graphics();
-    vector<GraphicsObject*> drawable;
+    
     void resize(int w, int h);
     void draw();
+    void Register(GraphicsObject* newObject);
+    void UnRegister(GraphicsObject* newObject);
 };
 #endif /* defined(__OOP_Game__GraphicsCore__) */
