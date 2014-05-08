@@ -30,12 +30,23 @@ Graphics::Graphics() {
 void Graphics::draw(){
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
+    //glPushMatrix();
     
-    glBegin(GL_TRIANGLES);
-    glVertex3f(0.0, 0.0, -10.0);
-    glVertex3f(1.0, 0.0, -10.0);
-    glVertex3f(0.0, 1.0, -10.0);
-    glEnd();
+    //render drawable objects
+    for(int i = 0; i < drawable.size(); i++) {
+        drawable[i]->draw();
+    }
     
+    //glPopMatrix();
     glutSwapBuffers();
 }
+
+void Graphics::resize(int w, int h) {
+    glViewport(0, 0, w, h);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glFrustum(-0.1, 0.1, -float(h)/(10.0*float(w)), float(h)/(10.0*float(w)), 0.5, 1000.0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+}
+

@@ -11,10 +11,13 @@
 
 #include <iostream>
 #include "stdafx.h"
+#include "Player.h"
 
 class GameControl {
     
-    
+    vector<Actor*> Actors;
+public:
+    GameControl();
 };
 
 #endif /* defined(__OOP_Game__GameControl__) */

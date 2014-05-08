@@ -7,3 +7,12 @@
 //
 
 #include "GameControl.h"
+
+GameControl::GameControl() {
+    
+    //Create The Player
+    Player * player = new Player;
+    
+    Actors.push_back(player);
+    
+}

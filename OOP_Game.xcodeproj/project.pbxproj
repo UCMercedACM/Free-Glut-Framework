@@ -17,6 +17,14 @@
 		69BB85AC191AFF4C0050EFF2 /* GraphicsCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85AA191AFF4C0050EFF2 /* GraphicsCore.cpp */; };
 		69BB85AF191AFF950050EFF2 /* AudioCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85AD191AFF950050EFF2 /* AudioCore.cpp */; };
 		69BB85B2191AFFCD0050EFF2 /* GameControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85B0191AFFCD0050EFF2 /* GameControl.cpp */; };
+		69BB85B7191B190A0050EFF2 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85B5191B190A0050EFF2 /* Player.cpp */; };
+		69BB85BA191B2FAB0050EFF2 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85B8191B2FAB0050EFF2 /* Actor.cpp */; };
+		69BB85C0191B32BD0050EFF2 /* GraphicsObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85BE191B32BD0050EFF2 /* GraphicsObject.cpp */; };
+		69BB85C3191B374A0050EFF2 /* City.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85C1191B374A0050EFF2 /* City.cpp */; };
+		69BB85C6191B375C0050EFF2 /* HostileCity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85C4191B375C0050EFF2 /* HostileCity.cpp */; };
+		69BB85CA191B37DA0050EFF2 /* Missile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85C8191B37DA0050EFF2 /* Missile.cpp */; };
+		69BB85CD191B37E60050EFF2 /* Bomb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85CB191B37E60050EFF2 /* Bomb.cpp */; };
+		69BB85D0191B37FC0050EFF2 /* Explosion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85CE191B37FC0050EFF2 /* Explosion.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +59,22 @@
 		69BB85AE191AFF950050EFF2 /* AudioCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioCore.h; sourceTree = "<group>"; };
 		69BB85B0191AFFCD0050EFF2 /* GameControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameControl.cpp; sourceTree = "<group>"; };
 		69BB85B1191AFFCD0050EFF2 /* GameControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameControl.h; sourceTree = "<group>"; };
+		69BB85B5191B190A0050EFF2 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		69BB85B6191B190A0050EFF2 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		69BB85B8191B2FAB0050EFF2 /* Actor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
+		69BB85B9191B2FAB0050EFF2 /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
+		69BB85BE191B32BD0050EFF2 /* GraphicsObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GraphicsObject.cpp; sourceTree = "<group>"; };
+		69BB85BF191B32BD0050EFF2 /* GraphicsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsObject.h; sourceTree = "<group>"; };
+		69BB85C1191B374A0050EFF2 /* City.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = City.cpp; sourceTree = "<group>"; };
+		69BB85C2191B374A0050EFF2 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		69BB85C4191B375C0050EFF2 /* HostileCity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HostileCity.cpp; sourceTree = "<group>"; };
+		69BB85C5191B375C0050EFF2 /* HostileCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostileCity.h; sourceTree = "<group>"; };
+		69BB85C8191B37DA0050EFF2 /* Missile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Missile.cpp; sourceTree = "<group>"; };
+		69BB85C9191B37DA0050EFF2 /* Missile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Missile.h; sourceTree = "<group>"; };
+		69BB85CB191B37E60050EFF2 /* Bomb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bomb.cpp; sourceTree = "<group>"; };
+		69BB85CC191B37E60050EFF2 /* Bomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bomb.h; sourceTree = "<group>"; };
+		69BB85CE191B37FC0050EFF2 /* Explosion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Explosion.cpp; sourceTree = "<group>"; };
+		69BB85CF191B37FC0050EFF2 /* Explosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Explosion.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +111,8 @@
 		690016D8191AD5E3009FCEE7 /* OOP_Game */ = {
 			isa = PBXGroup;
 			children = (
+				69BB85C7191B37730050EFF2 /* Objects */,
+				69BB85B4191B18D10050EFF2 /* Actors */,
 				69BB85A4191AFC940050EFF2 /* Core */,
 				69BB8594191AE4990050EFF2 /* main.cpp */,
 				690016DB191AD5E3009FCEE7 /* OOP_Game.1 */,
@@ -142,8 +168,38 @@
 			children = (
 				69BB85AA191AFF4C0050EFF2 /* GraphicsCore.cpp */,
 				69BB85AB191AFF4C0050EFF2 /* GraphicsCore.h */,
+				69BB85BE191B32BD0050EFF2 /* GraphicsObject.cpp */,
+				69BB85BF191B32BD0050EFF2 /* GraphicsObject.h */,
 			);
 			name = Render;
+			sourceTree = "<group>";
+		};
+		69BB85B4191B18D10050EFF2 /* Actors */ = {
+			isa = PBXGroup;
+			children = (
+				69BB85B5191B190A0050EFF2 /* Player.cpp */,
+				69BB85B6191B190A0050EFF2 /* Player.h */,
+				69BB85B8191B2FAB0050EFF2 /* Actor.cpp */,
+				69BB85B9191B2FAB0050EFF2 /* Actor.h */,
+				69BB85C1191B374A0050EFF2 /* City.cpp */,
+				69BB85C2191B374A0050EFF2 /* City.h */,
+				69BB85C4191B375C0050EFF2 /* HostileCity.cpp */,
+				69BB85C5191B375C0050EFF2 /* HostileCity.h */,
+			);
+			name = Actors;
+			sourceTree = "<group>";
+		};
+		69BB85C7191B37730050EFF2 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				69BB85C8191B37DA0050EFF2 /* Missile.cpp */,
+				69BB85C9191B37DA0050EFF2 /* Missile.h */,
+				69BB85CB191B37E60050EFF2 /* Bomb.cpp */,
+				69BB85CC191B37E60050EFF2 /* Bomb.h */,
+				69BB85CE191B37FC0050EFF2 /* Explosion.cpp */,
+				69BB85CF191B37FC0050EFF2 /* Explosion.h */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,11 +253,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69BB85BA191B2FAB0050EFF2 /* Actor.cpp in Sources */,
+				69BB85B7191B190A0050EFF2 /* Player.cpp in Sources */,
 				69BB85AC191AFF4C0050EFF2 /* GraphicsCore.cpp in Sources */,
+				69BB85C0191B32BD0050EFF2 /* GraphicsObject.cpp in Sources */,
 				69BB85AF191AFF950050EFF2 /* AudioCore.cpp in Sources */,
+				69BB85C6191B375C0050EFF2 /* HostileCity.cpp in Sources */,
 				69BB85B2191AFFCD0050EFF2 /* GameControl.cpp in Sources */,
+				69BB85CD191B37E60050EFF2 /* Bomb.cpp in Sources */,
+				69BB85CA191B37DA0050EFF2 /* Missile.cpp in Sources */,
 				69BB8599191AE4990050EFF2 /* main.cpp in Sources */,
 				69BB85A3191AF9690050EFF2 /* Engine.cpp in Sources */,
+				69BB85D0191B37FC0050EFF2 /* Explosion.cpp in Sources */,
+				69BB85C3191B374A0050EFF2 /* City.cpp in Sources */,
 				69BB859A191AE4990050EFF2 /* Game.cpp in Sources */,
 				69BB859F191AF2380050EFF2 /* Controller.cpp in Sources */,
 			);

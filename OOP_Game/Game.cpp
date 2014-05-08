@@ -25,14 +25,7 @@ void Game::windowToScene ( float& x, float &y )
 
 void Game::resize ( int w, int h )
  {
-   // Define that OpenGL should use the whole window for rendering
-     glViewport(0, 0, w, h);
-     glMatrixMode(GL_PROJECTION);
-     glLoadIdentity();
-     glFrustum(-0.1, 0.1, -float(h)/(10.0*float(w)), float(h)/(10.0*float(w)), 0.5, 1000.0);
-     glMatrixMode(GL_MODELVIEW);
-     glLoadIdentity();
-   _w=w; _h=h;
+     renderer.resize(w,h);
  }
 
 // here we will redraw the scene according to the current state of the application.
@@ -42,6 +35,5 @@ void Game::draw ()
 }
 
 void Game::update() {
-    
     
 }

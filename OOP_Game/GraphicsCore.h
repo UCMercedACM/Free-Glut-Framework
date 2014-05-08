@@ -10,13 +10,15 @@
 #define __OOP_Game__GraphicsCore__
 
 #include <iostream>
+#include <vector>
 #include "stdafx.h"
-
+#include "GraphicsObject.h"
 class Graphics {
     
 public:
     Graphics();
-    void resize();
+    vector<GraphicsObject*> drawable;
+    void resize(int w, int h);
     void draw();
 };
 #endif /* defined(__OOP_Game__GraphicsCore__) */
