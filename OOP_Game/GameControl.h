@@ -18,6 +18,7 @@ class GameControl {
     
     
 public:
+    Player* player;
     GameControl();
     void Register(Actor* newActor);
     void UnRegister(Actor* newActor);

@@ -16,12 +16,14 @@
 
 GameControl::GameControl() {
 
+    player = new Player();
     
+    Grid * surface = new Grid();
 }
 
 void GameControl::Register(Actor* newActor) {
+    cout << "registered";
     Actors.push_back(newActor);
-    cout << "actor created";
 }
 
 void GameControl::UnRegister(Actor* newActor) {

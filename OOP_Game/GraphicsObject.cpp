@@ -7,7 +7,7 @@
 //
 
 #include "GraphicsObject.h"
-#include "Engine.h"
+#include "Game.h"
 
 //Object Types
 void RenderGrid();
@@ -18,5 +18,5 @@ GraphicsObject::GraphicsObject(int x, int y, float scale) {
     this->x = x;
     this->y = y;
     this->scale = scale;
-    //theGame->Register(this);
+    theGame->Register(this);
 }

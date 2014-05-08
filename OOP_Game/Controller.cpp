@@ -5,7 +5,7 @@
 //  Created by Matthew Bucci on 5/7/14.
 //  Copyright (c) 2014 Matthew Bucci. All rights reserved.
 //
-#include "Engine.h"
+#include "Game.h"
 #include "Controller.h"
 #include "Grid.h"
 #include "GameControl.h"
@@ -28,13 +28,17 @@ void Controller::glutKeyboardCB ( unsigned char key, int x, int y )
     CurEvent.my = y;
     Singleton->handle ( CurEvent );
     */
-    /*
+    
     cout << key;
     if(key == 'a')
-        Actors[0]->x-=.1;
-    if(key == 'b')
-        Actors[0]->x+=.1;
-    */
+        theGame->logic.player->x-=.01;
+    if(key == 'd')
+        theGame->logic.player->x+=.01;
+    if(key == 'w')
+        theGame->logic.player->y+=.01;
+    if(key == 's')
+        theGame->logic.player->y-=.01;
+    
         //theGame->logic.player->x+=.01;
 }
 

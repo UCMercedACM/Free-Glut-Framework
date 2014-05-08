@@ -9,6 +9,8 @@
 #include "Engine.h"
 #include "Game.h"
 
+
+
 Engine::Engine() {
     // First store this instance in our singleton pointer
 
@@ -44,7 +46,7 @@ void Engine::Register(GraphicsObject *Object){
     
     Actor * ActorToRegister = dynamic_cast<Actor*>(Object);
     //Object->uid = ObjectUID;
-    
+    cout << "created";
     if(ActorToRegister)
         logic.Register(ActorToRegister);
     

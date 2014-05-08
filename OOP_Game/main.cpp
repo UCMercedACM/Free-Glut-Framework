@@ -8,6 +8,7 @@
 //==========================================================================
 
 
+Game* theGame;
 int main ( int argc, char** argv )
 {
     // Init freeglut library:
@@ -16,12 +17,8 @@ int main ( int argc, char** argv )
     
     
     // Now create the window of your application:
-    Game* theGame = new Game();
-    //Create The World
-    Grid * surface = new Grid();
+    theGame = new Game();
     
-    //Create The Player
-    Player * player = new Player();
     theGame->run();
 
     return 0;
