@@ -24,6 +24,14 @@ void Player::draw() {
     glVertex3f( SIZE / 4,  SIZE / 4, 0);
     glVertex3f(-SIZE / 4,  SIZE / 4, 0);
     glEnd();
+    
+    glBegin(GL_QUADS);
+    //glColor3b(255,1,1);
+    glVertex3f(-SIZE / 4, -SIZE / 4, .1);
+    glVertex3f( SIZE / 4, -SIZE / 4, .1);
+    glVertex3f( SIZE / 4,  SIZE / 4, .1);
+    glVertex3f(-SIZE / 4,  SIZE / 4, .1);
+    glEnd();
     glPopMatrix();
     
     

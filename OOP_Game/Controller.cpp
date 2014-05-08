@@ -31,13 +31,13 @@ void Controller::glutKeyboardCB ( unsigned char key, int x, int y )
     
     cout << key;
     if(key == 'a')
-        theGame->logic.player->x-=.01;
+        theGame->logic.player->x-=.1;
     if(key == 'd')
-        theGame->logic.player->x+=.01;
+        theGame->logic.player->x+=.1;
     if(key == 'w')
-        theGame->logic.player->y+=.01;
+        theGame->logic.player->y+=.1;
     if(key == 's')
-        theGame->logic.player->y-=.01;
+        theGame->logic.player->y-=.1;
     
         //theGame->logic.player->x+=.01;
 }
