@@ -11,7 +11,7 @@
 
 
 Game::Game() {
-    Singleton->run();
+    theGame->run();
 }
 
 // mouse events are in window coordinates, but your scene is in [0,1]x[0,1],
@@ -38,16 +38,7 @@ void Game::resize ( int w, int h )
 // here we will redraw the scene according to the current state of the application.
 void Game::draw ()
  {
-     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-     glLoadIdentity();
-     
-     glBegin(GL_TRIANGLES);
-     glVertex3f(0.0, 0.0, -10.0);
-     glVertex3f(1.0, 0.0, -10.0);
-     glVertex3f(0.0, 1.0, -10.0);
-     glEnd();
-     
-     glutSwapBuffers();
+     renderer.draw();
 }
 
 void Game::update() {

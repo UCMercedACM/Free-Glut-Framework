@@ -10,6 +10,7 @@
 #define __OOP_Game__GameControl__
 
 #include <iostream>
+#include "stdafx.h"
 
 class GameControl {
     

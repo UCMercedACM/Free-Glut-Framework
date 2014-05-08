@@ -19,16 +19,13 @@
 using namespace std;
 
 class Engine {
+
+public:
+    Engine();
     Controller controls;
     Graphics renderer;
     Audio sound;
     GameControl logic;
-    
-    void initFreeglut(const char* label,int x, int y, int w, int h);
-    
-
-public:
-    Engine();
     virtual void draw() = 0;
     virtual void resize( int w, int h ) {}
     virtual void update() {}
@@ -44,6 +41,6 @@ public:
     static void glutReshapeCB ( int w, int h );
 };
 
-static Engine* Singleton;
+static Engine* theGame;
 
 #endif /* defined(__OOP_Game__Engine__) */

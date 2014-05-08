@@ -10,9 +10,13 @@
 #define __OOP_Game__GraphicsCore__
 
 #include <iostream>
+#include "stdafx.h"
 
 class Graphics {
     
-    
+public:
+    Graphics();
+    void resize();
+    void draw();
 };
 #endif /* defined(__OOP_Game__GraphicsCore__) */
