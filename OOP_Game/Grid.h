@@ -13,7 +13,7 @@
 #include "GraphicsObject.h"
 
 class Grid : public GraphicsObject{
-    
+    int offset;
 public:
     Grid(): GraphicsObject(0,0,1) {}
     virtual void draw();

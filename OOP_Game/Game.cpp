@@ -14,13 +14,6 @@ Game::Game() {
  
 }
 
-// mouse events are in window coordinates, but your scene is in [0,1]x[0,1],
-// so make here the conversion when needed
-void Game::windowToScene ( float& x, float &y )
- {
-   x = (2.0f*(x/float(_w))) - 1.0f;
-   y = 1.0f - (2.0f*(y/float(_h)));
- }
 
 
 void Game::resize ( int w, int h )

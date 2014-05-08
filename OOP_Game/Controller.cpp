@@ -14,7 +14,8 @@ Controller::Controller() {
     ::glutKeyboardFunc ( glutKeyboardCB );
     ::glutSpecialFunc ( glutSpecialCB );
     ::glutMouseFunc ( glutMouseCB );
-    ::glutMotionFunc ( glutMotionCB );
+    ::glutPassiveMotionFunc ( glutMotionCB );
+    ::glutMotionFunc(glutMotionCB);
 
 
 }
@@ -74,6 +75,12 @@ void Controller::glutMotionCB ( int x, int y )
     CurEvent.my = y;
     Singleton->handle ( CurEvent );
     */
+    float x1 = float(x);
+    float y1 = float(y);
+    
+    windowToScene(x1, y1);
+    theGame->logic.player->y = y1;
+    theGame->logic.player->x = x1;
 }
 
 void Controller::glutMenuCB ( int m )
@@ -83,4 +90,12 @@ void Controller::glutMenuCB ( int m )
     CurEvent.menuev = m;
     Singleton->handle ( CurEvent );
     */
+}
+
+// mouse events are in window coordinates, but your scene is in [0,1]x[0,1],
+// so make here the conversion when needed
+void Controller::windowToScene ( float& x, float &y )
+{
+    x = -((x/float(WINDOW_WIDTH))*2 - 1.0f);
+    y = (2.0f*(y/float(WINDOW_HEIGHT)))*2 -1.0f;
 }

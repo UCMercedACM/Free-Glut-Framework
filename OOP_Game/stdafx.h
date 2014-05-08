@@ -18,9 +18,11 @@
 #include <GLUT/glut.h>
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
+#include <OpenGL/OpenGL.h>
 #else
 #include <GL/freeglut.h>
 #endif
+
 
 
 //GAME OPTIONS

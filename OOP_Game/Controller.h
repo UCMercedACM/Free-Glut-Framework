@@ -30,7 +30,7 @@ public:
     static void glutKeyboardCB ( unsigned char key, int x, int y );
     static void glutSpecialCB ( int key, int x, int y );
     
-    
+    static void windowToScene ( float& x, float &y );
 };
 
 #endif /* defined(__OOP_Game__Controller__) */

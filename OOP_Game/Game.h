@@ -26,7 +26,6 @@ public :
     virtual void draw ();
     virtual void resize ( int w, int h );
     virtual void update();
-    void windowToScene ( float& x, float &y );
  };
 
 
