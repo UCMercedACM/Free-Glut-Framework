@@ -79,8 +79,10 @@ void Controller::glutMotionCB ( int x, int y )
     float y1 = float(y);
     
     windowToScene(x1, y1);
-    theGame->logic.player->y = y1;
-    theGame->logic.player->x = x1;
+    if(y1 > 1.8) y1 = 1.8;
+    cout << y1 << endl;
+    theGame->logic.player->y = theGame->logic.player->y + .1*(y1 - theGame->logic.player->y);
+    theGame->logic.player->x = theGame->logic.player->x + .1*(x1 - theGame->logic.player->x);
 }
 
 void Controller::glutMenuCB ( int m )
@@ -96,6 +98,6 @@ void Controller::glutMenuCB ( int m )
 // so make here the conversion when needed
 void Controller::windowToScene ( float& x, float &y )
 {
-    x = -((x/float(WINDOW_WIDTH))*2 - 1.0f);
+    x = -2*((x/float(WINDOW_WIDTH))*2 - 1.0f);
     y = (2.0f*(y/float(WINDOW_HEIGHT)))*2 -1.0f;
 }

@@ -13,6 +13,7 @@
 #include "Actor.h"
 
 class Player : public Actor {
+    float pos_delta;
 public:
     Player();
     virtual void draw();
