@@ -22,10 +22,10 @@ class Engine {
 
 public:
     Engine();
-    Controller controls;
     Graphics renderer;
     Audio sound;
     GameControl logic;
+    Controller controls;
     virtual void draw() = 0;
     virtual void resize( int w, int h ) {}
     virtual void update() {}

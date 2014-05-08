@@ -14,10 +14,8 @@ Controller::Controller() {
     ::glutSpecialFunc ( glutSpecialCB );
     ::glutMouseFunc ( glutMouseCB );
     ::glutMotionFunc ( glutMotionCB );
-    
-    // GLUT also supports a simple menu system, you may try this:
-    int id = ::glutCreateMenu ( glutMenuCB ); // the returned id could be used for adding submenus if needed
-    glutAttachMenu ( GLUT_RIGHT_BUTTON );
+
+
 }
 
 void Controller::glutKeyboardCB ( unsigned char key, int x, int y )
