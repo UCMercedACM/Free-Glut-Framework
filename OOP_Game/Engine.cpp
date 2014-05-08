@@ -11,9 +11,7 @@
 
 Engine::Engine() {
     // First store this instance in our singleton pointer
-    theGame = this;
-    
-    
+
     // Set up idle callback for background processing if needed:
     ::glutIdleFunc (glutIdleCB);
     
@@ -43,8 +41,9 @@ void Engine::glutDisplayCB ()
 }
 
 void Engine::Register(GraphicsObject *Object){
+    
     Actor * ActorToRegister = dynamic_cast<Actor*>(Object);
-    Object->uid = ObjectUID;
+    //Object->uid = ObjectUID;
     
     if(ActorToRegister)
         logic.Register(ActorToRegister);

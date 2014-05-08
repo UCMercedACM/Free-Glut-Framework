@@ -9,16 +9,18 @@
 #include "Grid.h"
 
 void Grid::draw() {
-
-    glRotatef(65,1.0f,0.0f,0.0f);
-    glTranslatef(0, 1, 0);
+    glPushMatrix();
+    //glRotatef(65,1.0f,0.0f,0.0f);
+    glTranslatef(0, 0, -2);
+    //Because I can't find SIZE
+    glScalef(10,10,10);
     glBegin(GL_QUADS);
     glVertex3f(-SIZE / 2, -SIZE / 2, 0);
     glVertex3f( SIZE / 2, -SIZE / 2, 0);
     glVertex3f( SIZE / 2,  SIZE / 2, 0);
     glVertex3f(-SIZE / 2,  SIZE / 2, 0);
     glEnd();
-
+    glPopMatrix();
     /*
     //draw the vertical lines
     glBegin(GL_LINES);

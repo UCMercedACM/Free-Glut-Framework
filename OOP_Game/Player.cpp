@@ -15,5 +15,16 @@ Player::Player() : Actor(0,0,1,100) {
 
 void Player::draw() {
     
+    glPushMatrix();
+    glTranslatef(x,y, 0);
+    glBegin(GL_QUADS);
+    //glColor3b(255,1,1);
+    glVertex3f(-SIZE / 4, -SIZE / 4, 0);
+    glVertex3f( SIZE / 4, -SIZE / 4, 0);
+    glVertex3f( SIZE / 4,  SIZE / 4, 0);
+    glVertex3f(-SIZE / 4,  SIZE / 4, 0);
+    glEnd();
+    glPopMatrix();
+    
     
 }

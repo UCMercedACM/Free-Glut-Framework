@@ -18,10 +18,10 @@ using namespace std;
 class GraphicsObject {
     
 private:
-    float x, y, scale;
     GraphicsObject(){};
     
 public:
+    float x, y, scale;
     unsigned int uid;
     GraphicsObject(int x, int y, float scale);
     virtual void draw() = 0;

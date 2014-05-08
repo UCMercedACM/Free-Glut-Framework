@@ -11,4 +11,5 @@
 Actor::Actor(float x, float y, float scale, int health)
 : GraphicsObject(x,y,scale) {
     this->health = health;
+    
 }

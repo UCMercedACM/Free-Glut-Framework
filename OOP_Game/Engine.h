@@ -18,6 +18,10 @@
 
 using namespace std;
 
+class Game;
+
+extern Game* theGame;
+
 class Engine {
 
 public:
@@ -43,6 +47,6 @@ public:
     static void glutReshapeCB ( int w, int h );
 };
 
-static Engine* theGame;
+
 
 #endif /* defined(__OOP_Game__Engine__) */

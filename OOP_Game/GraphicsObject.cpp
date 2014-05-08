@@ -18,5 +18,5 @@ GraphicsObject::GraphicsObject(int x, int y, float scale) {
     this->x = x;
     this->y = y;
     this->scale = scale;
-    theGame->renderer.Register(this);
+    //theGame->Register(this);
 }

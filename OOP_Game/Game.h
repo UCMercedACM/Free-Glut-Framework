@@ -19,14 +19,15 @@ class Game : public Engine{
     enum MenuEv { evOption0, evOption1 };
     float _markx, _marky;
     int _w, _h;
-    virtual void draw ();
-    virtual void resize ( int w, int h );
-    virtual void update();
+
     
 public :
     Game();
-    
+    virtual void draw ();
+    virtual void resize ( int w, int h );
+    virtual void update();
     void windowToScene ( float& x, float &y );
  };
+
 
 #endif // APP_WINDOW_H

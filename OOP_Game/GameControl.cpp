@@ -13,12 +13,15 @@
 #include "Player.h"
 #include "Grid.h"
 
+
 GameControl::GameControl() {
 
+    
 }
 
 void GameControl::Register(Actor* newActor) {
     Actors.push_back(newActor);
+    cout << "actor created";
 }
 
 void GameControl::UnRegister(Actor* newActor) {

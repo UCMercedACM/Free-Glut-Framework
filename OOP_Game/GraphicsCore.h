@@ -23,4 +23,5 @@ public:
     void Register(GraphicsObject* newObject);
     void UnRegister(GraphicsObject* newObject);
 };
+static vector<GraphicsObject*> drawable;
 #endif /* defined(__OOP_Game__GraphicsCore__) */

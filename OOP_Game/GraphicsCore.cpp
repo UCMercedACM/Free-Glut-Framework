@@ -7,7 +7,6 @@
 //
 
 #include "GraphicsCore.h"
-static vector<GraphicsObject*> drawable;
 
 Graphics::Graphics() {
     
