@@ -30,14 +30,16 @@ Graphics::Graphics() {
 void Graphics::draw(){
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     // Clear the trasnformation stack
-    //glMatrixMode(GL_PROJECTION);
+    glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    glPushMatrix();
     //
     //glTranslatef(-.5, -0.5, -0.5);
     //glRotatef(20, 1, 0, 1);
     //glTranslatef(-5, -5, -5);
-    
+    //First three coordinates are the camera position
+    //second three coordinates are the position of what you're looking at
+    //final three is the up vector (should be normalized)
+    gluLookAt(0, 3, 1, 0, 0, 0, 0, 0, 1);
     //render drawable objects
     for(int i = 0; i < drawable.size(); i++) {
         drawable[i]->draw();
@@ -49,7 +51,9 @@ void Graphics::draw(){
 
 void Graphics::resize(int w, int h) {
     glViewport(0, 0, w, h);
-    
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective(45.0,(float)w/h, 1,1000);
     /*
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
