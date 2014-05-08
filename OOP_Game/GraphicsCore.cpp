@@ -7,7 +7,6 @@
 //
 
 #include "GraphicsCore.h"
-
 Graphics::Graphics() {
     
     // Set window position (from top corner), and size (width and height)
@@ -21,10 +20,15 @@ Graphics::Graphics() {
     glShadeModel(GL_SMOOTH);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // Set background color to black and opaque
     glClearDepth(1.0f);                   // Set background depth to farthest
+    glutSetCursor(GLUT_CURSOR_NONE);      // Hide the Cursor
     glHint ( GL_LINE_SMOOTH_HINT, GL_NICEST );
     glHint ( GL_POINT_SMOOTH_HINT, GL_NICEST );
     glPointSize ( 4 );
     glLineWidth ( 2 );
+    
+    int swap_interval = 1;
+    CGLContextObj cgl_context = CGLGetCurrentContext();
+    CGLSetParameter(cgl_context, kCGLCPSwapInterval, &swap_interval);
 }
 
 void Graphics::draw(){

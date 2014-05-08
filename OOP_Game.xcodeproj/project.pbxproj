@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63AFE97D191C0583005CEE20 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AFE97C191C0583005CEE20 /* CoreGraphics.framework */; };
 		690016DC191AD5E3009FCEE7 /* OOP_Game.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 690016DB191AD5E3009FCEE7 /* OOP_Game.1 */; };
 		69BB8591191AE14C0050EFF2 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BB8590191AE14C0050EFF2 /* GLUT.framework */; };
 		69BB8593191AE15E0050EFF2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BB8592191AE15E0050EFF2 /* OpenGL.framework */; };
@@ -42,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		63AFE97C191C0583005CEE20 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		690016D6191AD5E3009FCEE7 /* OOP_Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OOP_Game; sourceTree = BUILT_PRODUCTS_DIR; };
 		690016DB191AD5E3009FCEE7 /* OOP_Game.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = OOP_Game.1; sourceTree = "<group>"; };
 		69BB8590191AE14C0050EFF2 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
@@ -85,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63AFE97D191C0583005CEE20 /* CoreGraphics.framework in Frameworks */,
 				69BB8593191AE15E0050EFF2 /* OpenGL.framework in Frameworks */,
 				69BB8591191AE14C0050EFF2 /* GLUT.framework in Frameworks */,
 			);
@@ -96,6 +99,7 @@
 		690016CD191AD5E3009FCEE7 = {
 			isa = PBXGroup;
 			children = (
+				63AFE97C191C0583005CEE20 /* CoreGraphics.framework */,
 				69BB8592191AE15E0050EFF2 /* OpenGL.framework */,
 				69BB8590191AE14C0050EFF2 /* GLUT.framework */,
 				690016D8191AD5E3009FCEE7 /* OOP_Game */,
