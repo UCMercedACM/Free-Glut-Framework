@@ -44,5 +44,6 @@ public:
     static void glutReshapeCB ( int w, int h );
 };
 
+static Engine* Singleton;
 
 #endif /* defined(__OOP_Game__Engine__) */

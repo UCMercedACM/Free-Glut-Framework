@@ -11,7 +11,7 @@
 
 
 Game::Game() {
-
+    Singleton->run();
 }
 
 // mouse events are in window coordinates, but your scene is in [0,1]x[0,1],

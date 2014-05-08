@@ -7,9 +7,8 @@
 //
 
 #include "Engine.h"
+#include "Game.h"
 
-
-static Engine* Singleton;      // we make it statice so that this pointer is hidden from other source files
 
 void Engine::initFreeglut(const char* label,int x, int y, int w, int h) {
     
@@ -43,13 +42,12 @@ Engine::Engine() {
     
     // Set up GLUT callback for drawing the scene:
     ::glutDisplayFunc (glutDisplayCB);
-    
-    Singleton->run();
 }
 
 void Engine::glutIdleCB ()
 {
     Singleton->update();
+    
 }
 
 void Engine::glutReshapeCB ( int w, int h )
