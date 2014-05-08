@@ -10,9 +10,13 @@
 		690016DC191AD5E3009FCEE7 /* OOP_Game.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 690016DB191AD5E3009FCEE7 /* OOP_Game.1 */; };
 		69BB8591191AE14C0050EFF2 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BB8590191AE14C0050EFF2 /* GLUT.framework */; };
 		69BB8593191AE15E0050EFF2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BB8592191AE15E0050EFF2 /* OpenGL.framework */; };
-		69BB8599191AE4990050EFF2 /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB8594191AE4990050EFF2 /* Engine.cpp */; };
-		69BB859A191AE4990050EFF2 /* BaseFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB8595191AE4990050EFF2 /* BaseFrame.cpp */; };
-		69BB859B191AE4990050EFF2 /* Frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB8597191AE4990050EFF2 /* Frame.cpp */; };
+		69BB8599191AE4990050EFF2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB8594191AE4990050EFF2 /* main.cpp */; };
+		69BB859A191AE4990050EFF2 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB8595191AE4990050EFF2 /* Game.cpp */; };
+		69BB859F191AF2380050EFF2 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB859D191AF2380050EFF2 /* Controller.cpp */; };
+		69BB85A3191AF9690050EFF2 /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85A1191AF9690050EFF2 /* Engine.cpp */; };
+		69BB85AC191AFF4C0050EFF2 /* GraphicsCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85AA191AFF4C0050EFF2 /* GraphicsCore.cpp */; };
+		69BB85AF191AFF950050EFF2 /* AudioCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85AD191AFF950050EFF2 /* AudioCore.cpp */; };
+		69BB85B2191AFFCD0050EFF2 /* GameControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85B0191AFFCD0050EFF2 /* GameControl.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,11 +37,20 @@
 		690016DB191AD5E3009FCEE7 /* OOP_Game.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = OOP_Game.1; sourceTree = "<group>"; };
 		69BB8590191AE14C0050EFF2 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		69BB8592191AE15E0050EFF2 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		69BB8594191AE4990050EFF2 /* Engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Engine.cpp; sourceTree = "<group>"; };
-		69BB8595191AE4990050EFF2 /* BaseFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseFrame.cpp; sourceTree = "<group>"; };
-		69BB8596191AE4990050EFF2 /* BaseFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseFrame.h; sourceTree = "<group>"; };
-		69BB8597191AE4990050EFF2 /* Frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Frame.cpp; sourceTree = "<group>"; };
-		69BB8598191AE4990050EFF2 /* Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Frame.h; sourceTree = "<group>"; };
+		69BB8594191AE4990050EFF2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		69BB8595191AE4990050EFF2 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		69BB8596191AE4990050EFF2 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		69BB859D191AF2380050EFF2 /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
+		69BB859E191AF2380050EFF2 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		69BB85A0191AF3650050EFF2 /* stdafx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		69BB85A1191AF9690050EFF2 /* Engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Engine.cpp; sourceTree = "<group>"; };
+		69BB85A2191AF9690050EFF2 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		69BB85AA191AFF4C0050EFF2 /* GraphicsCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GraphicsCore.cpp; sourceTree = "<group>"; };
+		69BB85AB191AFF4C0050EFF2 /* GraphicsCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsCore.h; sourceTree = "<group>"; };
+		69BB85AD191AFF950050EFF2 /* AudioCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioCore.cpp; sourceTree = "<group>"; };
+		69BB85AE191AFF950050EFF2 /* AudioCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioCore.h; sourceTree = "<group>"; };
+		69BB85B0191AFFCD0050EFF2 /* GameControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameControl.cpp; sourceTree = "<group>"; };
+		69BB85B1191AFFCD0050EFF2 /* GameControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameControl.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,14 +87,63 @@
 		690016D8191AD5E3009FCEE7 /* OOP_Game */ = {
 			isa = PBXGroup;
 			children = (
-				69BB8594191AE4990050EFF2 /* Engine.cpp */,
-				69BB8595191AE4990050EFF2 /* BaseFrame.cpp */,
-				69BB8596191AE4990050EFF2 /* BaseFrame.h */,
-				69BB8597191AE4990050EFF2 /* Frame.cpp */,
-				69BB8598191AE4990050EFF2 /* Frame.h */,
+				69BB85A4191AFC940050EFF2 /* Core */,
+				69BB8594191AE4990050EFF2 /* main.cpp */,
 				690016DB191AD5E3009FCEE7 /* OOP_Game.1 */,
+				69BB85A0191AF3650050EFF2 /* stdafx.h */,
 			);
 			path = OOP_Game;
+			sourceTree = "<group>";
+		};
+		69BB85A4191AFC940050EFF2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				69BB85A8191AFCC70050EFF2 /* GameLogic */,
+				69BB85A6191AFCB80050EFF2 /* Audio */,
+				69BB85A9191AFCD10050EFF2 /* Render */,
+				69BB85A5191AFCA40050EFF2 /* Controls */,
+				69BB85A1191AF9690050EFF2 /* Engine.cpp */,
+				69BB85A2191AF9690050EFF2 /* Engine.h */,
+				69BB8595191AE4990050EFF2 /* Game.cpp */,
+				69BB8596191AE4990050EFF2 /* Game.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		69BB85A5191AFCA40050EFF2 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				69BB859D191AF2380050EFF2 /* Controller.cpp */,
+				69BB859E191AF2380050EFF2 /* Controller.h */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		69BB85A6191AFCB80050EFF2 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				69BB85AD191AFF950050EFF2 /* AudioCore.cpp */,
+				69BB85AE191AFF950050EFF2 /* AudioCore.h */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		69BB85A8191AFCC70050EFF2 /* GameLogic */ = {
+			isa = PBXGroup;
+			children = (
+				69BB85B0191AFFCD0050EFF2 /* GameControl.cpp */,
+				69BB85B1191AFFCD0050EFF2 /* GameControl.h */,
+			);
+			name = GameLogic;
+			sourceTree = "<group>";
+		};
+		69BB85A9191AFCD10050EFF2 /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				69BB85AA191AFF4C0050EFF2 /* GraphicsCore.cpp */,
+				69BB85AB191AFF4C0050EFF2 /* GraphicsCore.h */,
+			);
+			name = Render;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +197,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69BB8599191AE4990050EFF2 /* Engine.cpp in Sources */,
-				69BB859A191AE4990050EFF2 /* BaseFrame.cpp in Sources */,
-				69BB859B191AE4990050EFF2 /* Frame.cpp in Sources */,
+				69BB85AC191AFF4C0050EFF2 /* GraphicsCore.cpp in Sources */,
+				69BB85AF191AFF950050EFF2 /* AudioCore.cpp in Sources */,
+				69BB85B2191AFFCD0050EFF2 /* GameControl.cpp in Sources */,
+				69BB8599191AE4990050EFF2 /* main.cpp in Sources */,
+				69BB85A3191AF9690050EFF2 /* Engine.cpp in Sources */,
+				69BB859A191AE4990050EFF2 /* Game.cpp in Sources */,
+				69BB859F191AF2380050EFF2 /* Controller.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
