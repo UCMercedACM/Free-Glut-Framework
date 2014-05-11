@@ -16,6 +16,7 @@ Game::Game() {
 
 void Game::setup() {
     theGame->logic.player = new Player();
+    theGame->logic.city = new City();
     Grid * surface = new Grid();
 }
 

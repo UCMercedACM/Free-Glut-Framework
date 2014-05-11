@@ -10,5 +10,14 @@
 #define __OOP_Game__City__
 
 #include <iostream>
+#include "Actor.h"
+
+class City : public Actor {
+
+public:
+    City();
+    virtual void draw();
+    virtual void Update();
+};
 
 #endif /* defined(__OOP_Game__City__) */

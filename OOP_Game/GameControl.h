@@ -13,11 +13,13 @@
 #include "stdafx.h"
 #include "Actor.h"
 #include "Player.h"
+#include "City.h"
 
 class GameControl {
     
 public:
     Player* player;
+    City* city;
     GameControl();
     void Register(Actor* newActor);
     void UnRegister(unsigned int uid);

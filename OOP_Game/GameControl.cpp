@@ -12,6 +12,7 @@
 //Object Types
 #include "Player.h"
 #include "Grid.h"
+#include "City.h"
 
 
 GameControl::GameControl() {
