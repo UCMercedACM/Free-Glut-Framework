@@ -13,9 +13,9 @@
 #include "Actor.h"
 
 class City : public Actor {
-
+    int type = 0;
 public:
-    City();
+    City(float x, float y, float z, int type = 0);
     virtual void draw();
     virtual void Update();
 };

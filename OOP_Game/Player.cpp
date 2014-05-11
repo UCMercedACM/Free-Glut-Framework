@@ -111,7 +111,7 @@ void Player::draw() {
 
 void Player::Update() {
     if(isfiring==true) {
-        Bomb * bomb = new Bomb(x,y,-z);
+        Bomb * bomb = new Bomb(x,y+.5,-z-.05);
         isfiring = false;
     }
 }

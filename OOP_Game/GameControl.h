@@ -16,7 +16,7 @@
 #include "City.h"
 
 class GameControl {
-    
+    double intensity;
 public:
     Player* player;
     City* city;
