@@ -53,7 +53,7 @@ void GameControl::Update() {
     
     //friendly cities
     if(rand()%int((chance*hostiletofriendly)) == 0)
-        City * newcity = new City(double((rand()%10 - 5))/2.5, -2, -1.98);
+        City * newcity = new City(double((rand()%10 - 5))/2.5, -10, -1.98);
     
     intensity+= rateofchange*pow(chance/20,3);
     
