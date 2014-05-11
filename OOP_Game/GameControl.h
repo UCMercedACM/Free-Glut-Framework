@@ -17,13 +17,13 @@
 
 class GameControl {
     double intensity;
+    int current_level;
 public:
+    vector<Actor*> Actors;
     Player* player;
-    City* city;
     GameControl();
     void Register(Actor* newActor);
     void UnRegister(unsigned int uid);
     void Update();
 };
-static vector<Actor*> Actors;
 #endif /* defined(__OOP_Game__GameControl__) */

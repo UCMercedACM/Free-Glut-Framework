@@ -23,6 +23,8 @@
 #include <GL/freeglut.h>
 #endif
 
+#include <typeinfo>
+#include "Math.h"
 
 
 //GAME OPTIONS

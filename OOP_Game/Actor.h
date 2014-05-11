@@ -15,10 +15,10 @@
 
 class Actor : public GraphicsObject {
 private:
-    int health;
     Actor() : GraphicsObject(0,0,0,0){};
 public:
     bool isfiring;
+    int health;
     Actor(float x, float y,float z, float scale, int health);
     virtual void draw() = 0;
     virtual void Update();

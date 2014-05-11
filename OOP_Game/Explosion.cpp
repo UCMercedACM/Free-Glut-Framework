@@ -9,6 +9,8 @@
 #include "Explosion.h"
 
 #include "Game.h"
+#include "City.h"
+#include "HostileCity.h"
 
 Explosion::Explosion(float x, float y, float z, int type): Actor(x,y,z,1,100){
     this->type = 0;
@@ -55,6 +57,11 @@ void Explosion::Update(){
     size+=.005;
     y+=.02;
     if(size > .5) {
+        //kill any cities around me
+        //for(int i=0; theGame->logic.Actors.size();i++) {
+            //check the type
+         //   theGame->logic.Actors[i]->health = 0;
+        //}
         theGame->UnRegister(this);
     }
 }
