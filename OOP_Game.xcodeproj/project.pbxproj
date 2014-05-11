@@ -28,6 +28,7 @@
 		69BB85D0191B37FC0050EFF2 /* Explosion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85CE191B37FC0050EFF2 /* Explosion.cpp */; };
 		69BB85D3191B3FBF0050EFF2 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85D1191B3FBF0050EFF2 /* Grid.cpp */; };
 		69C94B7E191FA507003722C7 /* aiming.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69C94B7C191FA507003722C7 /* aiming.cpp */; };
+		69C94B8019203E98003722C7 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C94B7F19203E98003722C7 /* OpenAL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +84,7 @@
 		69BB85D2191B3FBF0050EFF2 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 		69C94B7C191FA507003722C7 /* aiming.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = aiming.cpp; sourceTree = "<group>"; };
 		69C94B7D191FA507003722C7 /* aiming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aiming.h; sourceTree = "<group>"; };
+		69C94B7F19203E98003722C7 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C94B8019203E98003722C7 /* OpenAL.framework in Frameworks */,
 				63AFE97D191C0583005CEE20 /* CoreGraphics.framework in Frameworks */,
 				69BB8593191AE15E0050EFF2 /* OpenGL.framework in Frameworks */,
 				69BB8591191AE14C0050EFF2 /* GLUT.framework in Frameworks */,
@@ -102,6 +105,7 @@
 		690016CD191AD5E3009FCEE7 = {
 			isa = PBXGroup;
 			children = (
+				69C94B7F19203E98003722C7 /* OpenAL.framework */,
 				63AFE97C191C0583005CEE20 /* CoreGraphics.framework */,
 				69BB8592191AE15E0050EFF2 /* OpenGL.framework */,
 				69BB8590191AE14C0050EFF2 /* GLUT.framework */,

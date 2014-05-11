@@ -8,10 +8,12 @@
 
 #include "HostileCity.h"
 #include "Game.h"
+#include "Missile.h"
 
 
 HostileCity::HostileCity(float x, float y, float z, int type): Actor(x,y,z,1,100){
     this->type = type;
+    lastfired = 1000;
 }
 
 
@@ -78,6 +80,14 @@ void HostileCity::draw() {
 
 void HostileCity::Update() {
     y+=.02;
+    if (y>-3) {
+        if(lastfired> 1000) {
+            lastfired = 0;
+            Missle * retaliation  = new Missle(x,y,z);
+        }
+        lastfired++;
+    }
+    
     if (y>0.7) {
         theGame->UnRegister(this);
     }

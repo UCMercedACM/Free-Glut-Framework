@@ -14,6 +14,7 @@
 
 class HostileCity : public Actor {
     int type = 0;
+    int lastfired;
 public:
     HostileCity(float x, float y, float z, int type = 0);
     virtual void draw();
