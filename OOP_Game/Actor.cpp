@@ -7,9 +7,17 @@
 //
 
 #include "Actor.h"
+#include "Game.h"
 
-Actor::Actor(float x, float y, float scale, int health)
-: GraphicsObject(x,y,scale) {
+Actor::Actor(float x, float y,float z, float scale, int health)
+: GraphicsObject(x,y,z,scale) {
     this->health = health;
-    
+    theGame->logic.Register(this);
+}
+
+void Actor::Update(){
+    if(isfiring==true) {
+        cout << "BOOM";
+        isfiring = false;
+    }
 }

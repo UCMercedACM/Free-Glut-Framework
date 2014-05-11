@@ -14,8 +14,10 @@
 
 class Player : public Actor {
     float pos_delta;
+    GraphicsObject * reticle;
 public:
     Player();
     virtual void draw();
+    virtual void Update();
 };
 #endif /* defined(__OOP_Game__Player__) */

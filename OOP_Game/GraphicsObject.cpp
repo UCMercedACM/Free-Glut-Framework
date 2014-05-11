@@ -14,9 +14,10 @@ void RenderGrid();
 void RenderShip();
 void RenderCity();
 
-GraphicsObject::GraphicsObject(int x, int y, float scale) {
+GraphicsObject::GraphicsObject(float x, float y, float z, float scale) {
     this->x = x;
     this->y = y;
+    this->z = z;
     this->scale = scale;
     theGame->Register(this);
 }

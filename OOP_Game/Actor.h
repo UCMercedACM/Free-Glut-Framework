@@ -16,9 +16,11 @@
 class Actor : public GraphicsObject {
 private:
     int health;
-    Actor() : GraphicsObject(0,0,0){};
+    Actor() : GraphicsObject(0,0,0,0){};
 public:
-    Actor(float x, float y, float scale, int health);
+    bool isfiring;
+    Actor(float x, float y,float z, float scale, int health);
     virtual void draw() = 0;
+    virtual void Update();
 };
 #endif /* defined(__OOP_Game__Actor__) */

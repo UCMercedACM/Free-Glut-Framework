@@ -1,6 +1,7 @@
 # include <iostream>
 # include "Game.h"
 # include "stdafx.h"
+
 #include "Grid.h"
 
 //==========================================================================
@@ -18,7 +19,7 @@ int main ( int argc, char** argv )
     
     // Now create the window of your application:
     theGame = new Game();
-    
+    theGame->setup();
     theGame->run();
 
     return 0;

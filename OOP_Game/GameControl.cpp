@@ -16,19 +16,25 @@
 
 GameControl::GameControl() {
 
-    player = new Player();
-    
-    Grid * surface = new Grid();
+
 }
 
 void GameControl::Register(Actor* newActor) {
-    cout << "registered";
     Actors.push_back(newActor);
 }
 
-void GameControl::UnRegister(Actor* newActor) {
+void GameControl::UnRegister(unsigned int uid) {
     for(int i = 0; i < Actors.size(); i++) {
-        if(Actors[i]->uid == newActor->uid)
+        if(Actors[i]->uid == uid) {
+            //graphics core will handle freeing memory
             Actors.erase(Actors.begin()+i);
+        }
+    }
+}
+
+
+void GameControl::Update() {
+    for(int i = 0; i < Actors.size(); i++) {
+        Actors[i]->Update();
     }
 }

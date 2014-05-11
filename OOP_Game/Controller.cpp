@@ -29,18 +29,7 @@ void Controller::glutKeyboardCB ( unsigned char key, int x, int y )
     CurEvent.my = y;
     Singleton->handle ( CurEvent );
     */
-    
-    cout << key;
-    if(key == 'a')
-        theGame->logic.player->x-=.1;
-    if(key == 'd')
-        theGame->logic.player->x+=.1;
-    if(key == 'w')
-        theGame->logic.player->y+=.1;
-    if(key == 's')
-        theGame->logic.player->y-=.1;
-    
-        //theGame->logic.player->x+=.01;
+
 }
 
 void Controller::glutSpecialCB ( int key, int x, int y )
@@ -63,6 +52,7 @@ void Controller::glutMouseCB ( int b, int s, int x, int y )
     CurEvent.my = y;
     Singleton->handle ( CurEvent );
     */
+    theGame->logic.player->isfiring = true;
 }
 
 void Controller::glutMotionCB ( int x, int y )
@@ -80,8 +70,7 @@ void Controller::glutMotionCB ( int x, int y )
     
     windowToScene(x1, y1);
     if(y1 > 1.8) y1 = 1.8;
-    cout << y1 << endl;
-    theGame->logic.player->y = theGame->logic.player->y + .1*(y1 - theGame->logic.player->y);
+    theGame->logic.player->z = theGame->logic.player->z + .1*(y1 - theGame->logic.player->z);
     theGame->logic.player->x = theGame->logic.player->x + .1*(x1 - theGame->logic.player->x);
 }
 

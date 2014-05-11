@@ -21,9 +21,9 @@ private:
     GraphicsObject(){};
     
 public:
-    float x, y, scale;
+    float x, y, z, scale;
     unsigned int uid;
-    GraphicsObject(int x, int y, float scale);
+    GraphicsObject(float x, float y,float z, float scale);
     virtual void draw() = 0;
 };
 

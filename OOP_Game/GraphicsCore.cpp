@@ -71,11 +71,13 @@ void Graphics::Register(GraphicsObject* newObject) {
     drawable.push_back(newObject);
 }
 
-void Graphics::UnRegister(GraphicsObject* newObject) {
+void Graphics::UnRegister(unsigned int uid) {
     
     for(int i = 0; i < drawable.size(); i++) {
-        if(drawable[i]->uid == newObject->uid)
+        if(drawable[i]->uid == uid) {
+            delete drawable[i];
             drawable.erase(drawable.begin()+i);
+        }
     }
 
 

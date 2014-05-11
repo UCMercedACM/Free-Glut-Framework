@@ -7,16 +7,19 @@
 //
 
 #include "Player.h"
+#include "aiming.h"
+#include "Bomb.h"
 
-Player::Player() : Actor(0,0,1,100) {
+Player::Player() : Actor(0,-3,0,1,100) {
     pos_delta = 0;
+    reticle = new Aiming();
 }
 
 void Player::draw() {
     
     
     glPushMatrix();
-    glTranslatef(x,-3, -y);
+    glTranslatef(x,y, -z);
     glRotated(60*(x-pos_delta),0,1,0);
     glColor3f(1, 1, 1);
     glScaled(.5,.5,.5);
@@ -58,4 +61,11 @@ void Player::draw() {
     
     
     
+}
+
+void Player::Update() {
+    if(isfiring==true) {
+        Bomb * bomb = new Bomb(x,y,-z);
+        isfiring = false;
+    }
 }

@@ -14,20 +14,25 @@ Game::Game() {
  
 }
 
+void Game::setup() {
+    theGame->logic.player = new Player();
+    Grid * surface = new Grid();
+}
 
 
 void Game::resize ( int w, int h )
- {
+{
      renderer.resize(w,h);
- }
+}
 
 // here we will redraw the scene according to the current state of the application.
 void Game::draw ()
- {
+{
      renderer.draw();
 }
 
 void Game::update() {
+    logic.Update();
 }
 
 

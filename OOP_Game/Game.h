@@ -23,6 +23,7 @@ class Game : public Engine{
     
 public :
     Game();
+    void setup();
     virtual void draw ();
     virtual void resize ( int w, int h );
     virtual void update();

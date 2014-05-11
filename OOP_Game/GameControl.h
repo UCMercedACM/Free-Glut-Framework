@@ -16,12 +16,12 @@
 
 class GameControl {
     
-    
 public:
     Player* player;
     GameControl();
     void Register(Actor* newActor);
-    void UnRegister(Actor* newActor);
+    void UnRegister(unsigned int uid);
+    void Update();
 };
 static vector<Actor*> Actors;
 #endif /* defined(__OOP_Game__GameControl__) */

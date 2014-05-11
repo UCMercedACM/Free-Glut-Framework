@@ -44,20 +44,13 @@ void Engine::glutDisplayCB ()
 
 void Engine::Register(GraphicsObject *Object){
     
-    Actor * ActorToRegister = dynamic_cast<Actor*>(Object);
-    //Object->uid = ObjectUID;
-    cout << "created";
-    if(ActorToRegister)
-        logic.Register(ActorToRegister);
+    Object->uid = ObjectUID;
+    ObjectUID++;
     
     renderer.Register(Object);
 }
 
 void Engine::UnRegister(GraphicsObject *Object){
-    Actor * ActorToRegister = dynamic_cast<Actor*>(Object);
-    
-    if(ActorToRegister)
-        logic.UnRegister(ActorToRegister);
-    
-    renderer.UnRegister(Object);
+    logic.UnRegister(Object->uid);
+    renderer.UnRegister(Object->uid);
 }

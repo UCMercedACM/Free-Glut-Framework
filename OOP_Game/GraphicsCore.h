@@ -21,7 +21,7 @@ public:
     void resize(int w, int h);
     void draw();
     void Register(GraphicsObject* newObject);
-    void UnRegister(GraphicsObject* newObject);
+    void UnRegister(unsigned int uid);
 };
 static vector<GraphicsObject*> drawable;
 #endif /* defined(__OOP_Game__GraphicsCore__) */

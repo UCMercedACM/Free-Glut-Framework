@@ -27,6 +27,7 @@
 		69BB85CD191B37E60050EFF2 /* Bomb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85CB191B37E60050EFF2 /* Bomb.cpp */; };
 		69BB85D0191B37FC0050EFF2 /* Explosion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85CE191B37FC0050EFF2 /* Explosion.cpp */; };
 		69BB85D3191B3FBF0050EFF2 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69BB85D1191B3FBF0050EFF2 /* Grid.cpp */; };
+		69C94B7E191FA507003722C7 /* aiming.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69C94B7C191FA507003722C7 /* aiming.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,6 +81,8 @@
 		69BB85CF191B37FC0050EFF2 /* Explosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Explosion.h; sourceTree = "<group>"; };
 		69BB85D1191B3FBF0050EFF2 /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
 		69BB85D2191B3FBF0050EFF2 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		69C94B7C191FA507003722C7 /* aiming.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = aiming.cpp; sourceTree = "<group>"; };
+		69C94B7D191FA507003722C7 /* aiming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aiming.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +210,8 @@
 				69BB85CF191B37FC0050EFF2 /* Explosion.h */,
 				69BB85D1191B3FBF0050EFF2 /* Grid.cpp */,
 				69BB85D2191B3FBF0050EFF2 /* Grid.h */,
+				69C94B7C191FA507003722C7 /* aiming.cpp */,
+				69C94B7D191FA507003722C7 /* aiming.h */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			files = (
 				69BB85BA191B2FAB0050EFF2 /* Actor.cpp in Sources */,
 				69BB85B7191B190A0050EFF2 /* Player.cpp in Sources */,
+				69C94B7E191FA507003722C7 /* aiming.cpp in Sources */,
 				69BB85AC191AFF4C0050EFF2 /* GraphicsCore.cpp in Sources */,
 				69BB85C0191B32BD0050EFF2 /* GraphicsObject.cpp in Sources */,
 				69BB85AF191AFF950050EFF2 /* AudioCore.cpp in Sources */,
@@ -358,7 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -366,7 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};

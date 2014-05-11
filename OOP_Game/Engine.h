@@ -23,7 +23,7 @@ class Game;
 extern Game* theGame;
 
 class Engine {
-
+    unsigned int ObjectUID;
 public:
     Engine();
     Graphics renderer;
@@ -37,7 +37,7 @@ public:
     void UnRegister(GraphicsObject *Object);
     
     void redraw() { glutPostRedisplay(); }
-    unsigned int ObjectUID;
+    
     // Note that glutMainLoop never returns so your program is entirely event-driven
     void run () { glutMainLoop (); }
     
