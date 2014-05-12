@@ -15,11 +15,12 @@
 Explosion::Explosion(float x, float y, float z, int type): Actor(x,y,z,1,100){
     this->type = 0;
     size = .01;
+
 }
 
 void Explosion::draw(){
     glPushMatrix();
-    glTranslatef(x,y-.05,z);
+    glTranslatef(x,y,z);
     if(type == 0) {
         
         glColor3f(1,1,1);
@@ -58,10 +59,10 @@ void Explosion::Update(){
     y+=.02;
     if(size > .5) {
         //kill any cities around me
-        //for(int i=0; theGame->logic.Actors.size();i++) {
+        for(int i=0; i < theGame->logic.Actors.size();i++) {
             //check the type
          //   theGame->logic.Actors[i]->health = 0;
-        //}
+        }
         theGame->UnRegister(this);
     }
 }
