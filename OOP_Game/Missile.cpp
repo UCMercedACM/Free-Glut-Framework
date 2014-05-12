@@ -17,7 +17,16 @@ Missle::Missle(float x, float y, float z, int type): Actor(x,y,z,1,100){
     this->type = 0;
     //establish a movement vector
     
-
+    total_distance = sqrt(
+                          pow(theGame->logic.player->x - x,2)
+                          +pow(theGame->logic.player->y - y,2)
+                          +pow(theGame->logic.player->z - z,2)
+                          );
+    
+    delta_x = movement_speed * (theGame->logic.player->x - x)/total_distance;
+    delta_y = movement_speed * (theGame->logic.player->y - y)/total_distance;
+    delta_z = movement_speed * (theGame->logic.player->z - z)/total_distance;
+    
     
 }
 
@@ -66,21 +75,18 @@ void Missle::draw(){
 
 void Missle::Update(){
 
+
+    x+=delta_x;
+    y+=delta_y;
+    z+=movement_speed/2;
+    
     total_distance = sqrt(
                           pow(theGame->logic.player->x - x,2)
                           +pow(theGame->logic.player->y - y,2)
                           +pow(theGame->logic.player->z - z,2)
                           );
-    
-    delta_x = movement_speed * (theGame->logic.player->x - x)/total_distance;
-    delta_y = movement_speed * (theGame->logic.player->y - y)/total_distance;
-    delta_z = movement_speed * (theGame->logic.player->z - z)/total_distance;
-    
-    x+=delta_x;
-    y+=delta_y;
-    z+=movement_speed/2;
-    
-    if(z>theGame->logic.player->z) {
+    cout << total_distance << endl;
+    if(total_distance<.6) {
         Explosion * boom = new Explosion(x,y,z);
         theGame->UnRegister(this);
     }
