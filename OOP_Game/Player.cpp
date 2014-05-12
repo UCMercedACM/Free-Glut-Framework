@@ -22,11 +22,12 @@ void Player::draw() {
     glPushMatrix();
     glTranslatef(x,y, -z);
     glRotated(60*(x-pos_delta),0,1,0);
-    glColor3f(1, 1, 1);
+    glColor3f(.80, .81, .88);
     glScaled(.5,.5,.5);
     
     
     //cockpit
+    //glColor3f(1, 0, 0);
     glBegin(GL_QUADS);
     glVertex3f(-SIZE / 4, -SIZE * 1.5, 0);
     glVertex3f( SIZE / 4, -SIZE * 1.5, 0);
@@ -41,7 +42,8 @@ void Player::draw() {
     glVertex3f(-SIZE / 3.5,  SIZE / 2, 0);
     glEnd();
     
-    
+    glColor3f(.90, .91, .98);
+
     //body
     glBegin(GL_QUADS);
     glVertex3f(-SIZE / 3.5, SIZE / 2, 0.0);
@@ -61,23 +63,25 @@ void Player::draw() {
     
     
     //wings
-    
+    glColor3f(1, 0, 0);
+
     glBegin(GL_QUADS);
-    glVertex3f(0.0, SIZE , 0.0);
-    glVertex3f(SIZE * 3.75, SIZE * 1.5, 0.0);
-    glVertex3f( SIZE * 4, SIZE * 2 , 0.0);
-    glVertex3f( 0.0,  SIZE * 2 , 0.0);
+    glVertex3f(0.0, SIZE , -0.01);
+    glVertex3f(SIZE * 3.75, SIZE * 1.5, -0.01);
+    glVertex3f( SIZE * 4, SIZE * 2 , -0.01);
+    glVertex3f( 0.0,  SIZE * 2 , -0.01);
     glEnd();
     
     glBegin(GL_QUADS);
-    glVertex3f(0.0, SIZE , 0.0);
-    glVertex3f( -SIZE * 3.75, SIZE * 1.5, 0.0);
-    glVertex3f( -SIZE * 4, SIZE * 2 , 0.0);
-    glVertex3f( 0.0,  SIZE * 2 , 0.0);
+    glVertex3f(0.0, SIZE , -0.01);
+    glVertex3f( -SIZE * 3.75, SIZE * 1.5, -0.01);
+    glVertex3f( -SIZE * 4, SIZE * 2 , -0.01);
+    glVertex3f( 0.0,  SIZE * 2 , -0.01);
     glEnd();
     
     
     //tailwings
+    glColor3f(0, 0, 1);
     glBegin(GL_QUADS);
     glVertex3f(-SIZE / 3.5, SIZE * 3.3, 0.0);
     glVertex3f( -SIZE * 1.5, SIZE * 3.6, 0.5);
@@ -86,6 +90,7 @@ void Player::draw() {
     glEnd();
     
     
+    glColor3f(0, 0, 1);
     glBegin(GL_QUADS);
     glVertex3f(SIZE / 3.5, SIZE * 3.3, 0.0);
     glVertex3f( SIZE * 1.5, SIZE * 3.6, 0.5);

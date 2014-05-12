@@ -35,40 +35,60 @@ void Missle::draw(){
     glTranslatef(x,y-.05,z);
     if(type == 0) {
         
-        glColor3f(1,1,1);
+        //glColor3f(1,1,1);
+        glColor3f( 0.65 , 0.50 , 0.39);        //mediumwood
         float size = .05;
-        glBegin(GL_QUADS);
-        glColor3f(0.0f,1.0f,0.0f);    // Color Blue
-        glVertex3f( size, size,-size);    // Top Right Of The Quad (Top)
-        glVertex3f(-size, size,-size);    // Top Left Of The Quad (Top)
-        glVertex3f(-size, size, size);    // Bottom Left Of The Quad (Top)
-        glVertex3f( size, size, size);    // Bottom Right Of The Quad (Top)
-        glColor3f(1.0f,0.5f,0.0f);    // Color Orange
-        glVertex3f( size,-size, size);    // Top Right Of The Quad (Bottom)
-        glVertex3f(-size,-size, size);    // Top Left Of The Quad (Bottom)
-        glVertex3f(-size,-size,-size);    // Bottom Left Of The Quad (Bottom)
-        glVertex3f( size,-size,-size);    // Bottom Right Of The Quad (Bottom)
-        glColor3f(1.0f,0.0f,0.0f);    // Color Red
-        glVertex3f( size, size, size);    // Top Right Of The Quad (Front)
-        glVertex3f(-size, size, size);    // Top Left Of The Quad (Front)
-        glVertex3f(-size,-size, size);    // Bottom Left Of The Quad (Front)
-        glVertex3f( size,-size, size);    // Bottom Right Of The Quad (Front)
-        glColor3f(1.0f,1.0f,0.0f);    // Color Yellow
-        glVertex3f( size,-size,-size);    // Top Right Of The Quad (Back)
-        glVertex3f(-size,-size,-size);    // Top Left Of The Quad (Back)
-        glVertex3f(-size, size,-size);    // Bottom Left Of The Quad (Back)
-        glVertex3f( size, size,-size);    // Bottom Right Of The Quad (Back)
-        glColor3f(0.0f,0.0f,1.0f);    // Color Blue
-        glVertex3f(-size, size, size);    // Top Right Of The Quad (Left)
-        glVertex3f(-size, size,-size);    // Top Left Of The Quad (Left)
-        glVertex3f(-size,-size,-size);    // Bottom Left Of The Quad (Left)
-        glVertex3f(-size,-size, size);    // Bottom Right Of The Quad (Left)
-        glColor3f(1.0f,0.0f,1.0f);    // Color Violet
-        glVertex3f( size, size,-size);    // Top Right Of The Quad (Right)
-        glVertex3f( size, size, size);    // Top Left Of The Quad (Right)
-        glVertex3f( size,-size, size);    // Bottom Left Of The Quad (Right)
-        glVertex3f( size,-size,-size);    // Bottom Right Of The Quad (Right)
+        float angle = M_PI/16;
+//        glBegin(GL_QUADS);
+//        glColor3f(0.0f,1.0f,0.0f);    // Color Blue
+//        glVertex3f( size, size,-size);    // Top Right Of The Quad (Top)
+//        glVertex3f(-size, size,-size);    // Top Left Of The Quad (Top)
+//        glVertex3f(-size, size, size);    // Bottom Left Of The Quad (Top)
+//        glVertex3f( size, size, size);    // Bottom Right Of The Quad (Top)
+//        glColor3f(1.0f,0.5f,0.0f);    // Color Orange
+//        glVertex3f( size,-size, size);    // Top Right Of The Quad (Bottom)
+//        glVertex3f(-size,-size, size);    // Top Left Of The Quad (Bottom)
+//        glVertex3f(-size,-size,-size);    // Bottom Left Of The Quad (Bottom)
+//        glVertex3f( size,-size,-size);    // Bottom Right Of The Quad (Bottom)
+//        glColor3f(1.0f,0.0f,0.0f);    // Color Red
+//        glVertex3f( size, size, size);    // Top Right Of The Quad (Front)
+//        glVertex3f(-size, size, size);    // Top Left Of The Quad (Front)
+//        glVertex3f(-size,-size, size);    // Bottom Left Of The Quad (Front)
+//        glVertex3f( size,-size, size);    // Bottom Right Of The Quad (Front)
+//        glColor3f(1.0f,1.0f,0.0f);    // Color Yellow
+//        glVertex3f( size,-size,-size);    // Top Right Of The Quad (Back)
+//        glVertex3f(-size,-size,-size);    // Top Left Of The Quad (Back)
+//        glVertex3f(-size, size,-size);    // Bottom Left Of The Quad (Back)
+//        glVertex3f( size, size,-size);    // Bottom Right Of The Quad (Back)
+//        glColor3f(0.0f,0.0f,1.0f);    // Color Blue
+//        glVertex3f(-size, size, size);    // Top Right Of The Quad (Left)
+//        glVertex3f(-size, size,-size);    // Top Left Of The Quad (Left)
+//        glVertex3f(-size,-size,-size);    // Bottom Left Of The Quad (Left)
+//        glVertex3f(-size,-size, size);    // Bottom Right Of The Quad (Left)
+//        glColor3f(1.0f,0.0f,1.0f);    // Color Violet
+//        glVertex3f( size, size,-size);    // Top Right Of The Quad (Right)
+//        glVertex3f( size, size, size);    // Top Left Of The Quad (Right)
+//        glVertex3f( size,-size, size);    // Bottom Left Of The Quad (Right)
+//        glVertex3f( size,-size,-size);    // Bottom Right Of The Quad (Right)
+//        glEnd();
+        
+        glBegin(GL_TRIANGLES);
+        for (float phi=(-M_PI/2); phi < M_PI; phi+=angle )
+        {
+            for(float theta = 0.0; theta<(2*M_PI); theta+=angle)
+            {
+                glVertex3f(size*cos(theta)*sin(phi),size*sin(theta)*sin(phi), size*cos(phi));
+                glVertex3f(size*cos(theta)*sin(phi+angle), size*sin(theta)*sin(phi+angle), size*cos(phi+angle));
+                glVertex3f(size*cos(theta+angle)*sin(phi), size*sin(theta+angle)*sin(phi), size*cos(phi));
+                
+                glVertex3f(size*cos(theta+angle)*sin(phi+angle), size*sin(theta+angle)*sin(phi+angle), size*cos(phi+angle));
+                glVertex3f(size*cos(theta)*sin(phi+angle), size*sin(theta)*sin(phi+angle), size*cos(phi+angle));
+                glVertex3f(size*cos(theta+angle)*sin(phi), size*sin(theta+angle)*sin(phi), size*cos(phi));
+            }
+        }
+        
         glEnd();
+        
     }
     glPopMatrix();
 }

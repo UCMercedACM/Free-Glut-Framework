@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "Actor.h"
+#include <math.h>
 
 class Explosion : Actor{
     int type;
