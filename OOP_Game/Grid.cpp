@@ -66,7 +66,7 @@ void Grid::draw() {
     
     
     
-    
+    /*
     //The GRID
     glPushMatrix();
     glTranslatef(0, 0, -2);
@@ -90,6 +90,7 @@ void Grid::draw() {
     };
     glEnd();
     glPopMatrix();
+     */
     offset++;
     offset%=20;
 }

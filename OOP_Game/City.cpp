@@ -157,3 +157,9 @@ void City::Update() {
     }
     
 }
+
+void City::die() {
+    theGame->logic.intensity+=.1;
+    theGame->logic.friendlies_killed+=25;
+    theGame->UnRegister(this);
+}

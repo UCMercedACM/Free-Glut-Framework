@@ -19,6 +19,7 @@ public:
     HostileCity(float x, float y, float z, int type = 0);
     virtual void draw();
     virtual void Update();
+    void die();
 };
 
 #endif /* defined(__OOP_Game__HostileCity__) */

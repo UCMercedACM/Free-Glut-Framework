@@ -9,6 +9,7 @@
 #include "Player.h"
 #include "aiming.h"
 #include "Bomb.h"
+#include "Game.h"
 
 Player::Player() : Actor(0,-3,0,1,100) {
     pos_delta = 0;
@@ -111,7 +112,33 @@ void Player::draw() {
     glPopMatrix();
     pos_delta = pos_delta + .2*(x-pos_delta);
     
+    stringstream civ;
+    civ << "Civilians Killed: " << theGame->logic.friendlies_killed;
     
+    
+    string text = civ.str();
+    glPushMatrix();
+    glColor3f(1, 1, 1);
+    glRasterPos2f(-1, 0);
+    for (int i = 0; i < text.size(); i++) {
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, text[i]);
+    }
+    glPopMatrix();
+    
+    stringstream enem;
+    enem << "Enemies Killed: " << theGame->logic.enemies_killed;
+    
+    
+    text = enem.str();
+    glPushMatrix();
+    glColor3f(1, 1, 1);
+    glTranslatef(0,0, .1);
+    glRasterPos2f(-1, 0);
+    for (int i = 0; i < text.size(); i++) {
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, text[i]);
+    }
+    glPopMatrix();
+
 }
 
 void Player::Update() {

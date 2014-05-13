@@ -83,6 +83,15 @@ void Bomb::Update(){
     
     if(z<-2) {
         Explosion * boom = new Explosion(x,y,z);
+        for(int i = 0; i < theGame->logic.Actors.size(); i++) {
+            double total_distance = sqrt(
+                                  pow(theGame->logic.Actors[i]->x - x,2)
+                                  +pow(theGame->logic.Actors[i]->y - y,2)
+                                  +pow(theGame->logic.Actors[i]->z - z,2)
+                                  );
+            if(total_distance < .5)
+                theGame->logic.Actors[i]->die();
+        }
         theGame->UnRegister(this);
     }
 }

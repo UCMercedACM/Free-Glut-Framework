@@ -105,8 +105,8 @@ void Missle::Update(){
                           +pow(theGame->logic.player->y - y,2)
                           +pow(theGame->logic.player->z - z,2)
                           );
-    cout << total_distance << endl;
-    if(total_distance<1 || z > 50) {
+
+    if(total_distance < 1 || z > 50) {
         Explosion * boom = new Explosion(theGame->logic.player->x,theGame->logic.player->y,theGame->logic.player->z);
         theGame->UnRegister(this);
     }

@@ -176,3 +176,9 @@ void HostileCity::Update() {
     }
     
 }
+
+void HostileCity::die() {
+    theGame->logic.enemies_killed+=10;
+    theGame->logic.friendlies_killed+=15;
+    theGame->UnRegister(this);
+}

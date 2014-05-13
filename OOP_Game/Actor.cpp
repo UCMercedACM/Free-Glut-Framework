@@ -21,3 +21,8 @@ void Actor::Update(){
         isfiring = false;
     }
 }
+
+void Actor::die() {
+    
+    
+}

@@ -19,6 +19,8 @@
 GameControl::GameControl() {
     intensity = .02;
     current_level = 0;
+    enemies_killed = 0;
+    friendlies_killed = 0;
 }
 
 void GameControl::Register(Actor* newActor) {
@@ -40,6 +42,9 @@ void GameControl::Update() {
         Actors[i]->Update();
     }
     
+    if (intensity > .9) intensity = .9;
+    if (intensity < .05) intensity = .05;
+    cout << intensity << endl;
     int chance = int(10/intensity);
     
     //in the future these should depend on level condition
@@ -48,18 +53,18 @@ void GameControl::Update() {
     int leveltarget = 200;
     
     //hostile cities
-    if(rand()%chance == 0)
+    if(rand()%int((1-intensity)*300) == 0)
         HostileCity * newhostile = new HostileCity(double((rand()%10 - 5))/2.5, -10, -1.98);
     
     //friendly cities
-    if(rand()%int((chance*hostiletofriendly)) == 0)
+    if(rand()%int((intensity)*300) == 0)
         City * newcity = new City(double((rand()%10 - 5))/2.5, -10, -1.98);
     
     intensity+= rateofchange*pow(chance/20,3);
     
     float levelprogress = 1 - double(-(leveltarget - chance)) / 300 ;
     //cout << "Level Progress:" << double(-(200 - chance)) / 300 << endl;
-    if (levelprogress > 1) {
-        cout << "Level Complete" << endl;
-    }
+    
+    
+
 }

@@ -22,5 +22,6 @@ public:
     Actor(float x, float y,float z, float scale, int health);
     virtual void draw() = 0;
     virtual void Update();
+    virtual void die();
 };
 #endif /* defined(__OOP_Game__Actor__) */

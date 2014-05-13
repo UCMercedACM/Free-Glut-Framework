@@ -16,9 +16,11 @@
 #include "City.h"
 
 class GameControl {
+public:
     double intensity;
     int current_level;
-public:
+    int enemies_killed;
+    int friendlies_killed;
     vector<Actor*> Actors;
     Player* player;
     GameControl();

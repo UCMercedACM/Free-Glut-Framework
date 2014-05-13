@@ -25,6 +25,8 @@
 
 #include <typeinfo>
 #include "Math.h"
+#include "string"
+#include "sstream"
 
 
 //GAME OPTIONS
@@ -32,7 +34,7 @@
 #define WINDOW_START_Y 0
 #define WINDOW_WIDTH   1024
 #define WINDOW_HEIGHT  800
-#define GAME_TITLE     "THE BEST GAME EVER"
+#define GAME_TITLE     "Drone Simulator 2014"
 #define SIZE .5
 
 #endif

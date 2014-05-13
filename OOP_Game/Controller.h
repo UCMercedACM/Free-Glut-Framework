@@ -13,7 +13,7 @@
 #include "stdafx.h"
 
 class Controller {
-    
+    int lastrequest;
 public:
     Controller();
     enum EventType { SpecialKey, Keyboard, MouseUp, MouseDown, Motion, Menu, None };

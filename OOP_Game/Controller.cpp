@@ -16,8 +16,8 @@ Controller::Controller() {
     ::glutMouseFunc ( glutMouseCB );
     ::glutPassiveMotionFunc ( glutMotionCB );
     ::glutMotionFunc(glutMotionCB);
-
-
+    
+    lastrequest = 0;
 }
 
 void Controller::glutKeyboardCB ( unsigned char key, int x, int y )
@@ -69,7 +69,8 @@ void Controller::glutMotionCB ( int x, int y )
     float y1 = float(y);
     
     windowToScene(x1, y1);
-    if(y1 > 1.8) y1 = 1.8;
+    if(y1 > 1.7) y1 = 1.7;
+    cout << y1 << endl;
     theGame->logic.player->z = theGame->logic.player->z + .1*(y1 - theGame->logic.player->z);
     theGame->logic.player->x = theGame->logic.player->x + .1*(x1 - theGame->logic.player->x);
 }
